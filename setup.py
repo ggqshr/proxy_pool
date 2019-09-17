@@ -11,7 +11,7 @@ setuptools.setup(
     description="爬虫代理IP池",
     long_description=long_description,
     long_description_context_type="text/markdown",
-    url="",
+    url="https://github.com/ggqshr/proxy_pool",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
