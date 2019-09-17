@@ -1,8 +1,0 @@
-README.md
-setup.py
-proxy_pool/__init__.py
-proxy_pool/ip_pool.py
-proxy_pool.egg-info/PKG-INFO
-proxy_pool.egg-info/SOURCES.txt
-proxy_pool.egg-info/dependency_links.txt
-proxy_pool.egg-info/top_level.txt

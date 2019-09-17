@@ -61,7 +61,6 @@ class IpPool(object):
             self.cond.wait_for(self._has_ip)
             return random.choice(list(self.ip_pool))
 
-
     def report_baned_ip(self, ip):
         """
         报告已经被ban掉的IP，针对被ban掉的IP采取措施，

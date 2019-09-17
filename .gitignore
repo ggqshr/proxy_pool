@@ -133,7 +133,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-!/proxy_pool.egg-info/
-!/ggq_proxy_pool.egg-info/
-!/dist/
-!/build/
+proxy_pool.egg-info/**
+ggq_proxy_pool.egg-info/**
+!/.pypirc
