@@ -1,7 +1,15 @@
+import os
+
 import setuptools
 
-with open("README.md", "r",encoding="utf8") as fh:
+with open("README.md", "r", encoding="utf8") as fh:
     long_description = fh.read()
+
+if os.path.exists("requirements.txt"):
+    with open("requirements.txt", "r") as f:
+        install_requires = f.read().split("\n")
+else:
+    install_requires = []
 
 setuptools.setup(
     name="ggq_proxy_pool",
@@ -13,6 +21,7 @@ setuptools.setup(
     long_description_context_type="text/markdown",
     url="https://github.com/ggqshr/proxy_pool",
     packages=setuptools.find_packages(),
+    install_requires=install_requires,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
