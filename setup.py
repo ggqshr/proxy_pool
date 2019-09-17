@@ -5,7 +5,7 @@ with open("README.md", "r",encoding="utf8") as fh:
 
 setuptools.setup(
     name="ggq_proxy_pool",
-    version="0.0.3",
+    version="0.0.4",
     author="ggq",
     author_email="942490944@qq.com",
     description="爬虫代理IP池",

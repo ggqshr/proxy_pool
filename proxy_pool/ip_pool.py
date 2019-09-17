@@ -94,6 +94,8 @@ class IpPool(object):
         :param ip:
         :return:
         """
+        if ip not in self.ip_pool:
+            return
         logging.warning(f"bad net ip {ip}")
         self.bad_net_ip_count.append(ip)  # 将其加入到集合中
         count_list = Counter(self.bad_net_ip_count)

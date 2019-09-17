@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72101da6-3922-461b-909e-a0a5ffb98e74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ggq_proxy_pool-0.0.1-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ggq_proxy_pool-0.0.1.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ggq_proxy_pool.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ggq_proxy_pool.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ggq_proxy_pool.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ggq_proxy_pool.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_pool.egg-info/top_level.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/proxy_pool/ip_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/ip_pool.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +56,8 @@
       <workItem from="1568712223029" duration="2193000" />
       <workItem from="1568716531670" duration="12000" />
       <workItem from="1568716763820" duration="363000" />
-      <workItem from="1568719296479" duration="501000" />
+      <workItem from="1568719296479" duration="802000" />
+      <workItem from="1568720228387" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="添加依赖">
       <created>1568716991217</created>
@@ -75,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568716991217</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新版本">
+      <created>1568719986710</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568719986710</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加依赖" />
+    <MESSAGE value="更新版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新版本" />
   </component>
 </project>
