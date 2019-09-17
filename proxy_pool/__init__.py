@@ -1,2 +1,2 @@
 from .ip_pool import IpPool
-name = "proxy_pool"
+name = "ggq_proxy_pool"

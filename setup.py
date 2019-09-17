@@ -1,10 +1,10 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r",encoding="utf8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="proxy_pool",
+    name="ggq_proxy_pool",
     version="0.0.1",
     author="ggq",
     author_email="942490944@qq.com",
