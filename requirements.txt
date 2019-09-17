@@ -1,2 +1,1 @@
-setuptools==40.6.2
 requests==2.22.0
