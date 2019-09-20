@@ -13,7 +13,7 @@ else:
 
 setuptools.setup(
     name="ggq_proxy_pool",
-    version="0.1.0",
+    version="0.1.1",
     author="ggq",
     author_email="942490944@qq.com",
     description="爬虫代理IP池",
