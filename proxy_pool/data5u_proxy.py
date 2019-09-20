@@ -13,7 +13,8 @@ class Data5UProxy(IpPool):
         super().__init__(api_url)
 
     def start(self):
-        GetIpThread(self.api_url, self.ip_pool, self.cond).start()
+        # GetIpThread(self.api_url, self.ip_pool, self.cond).start()
+        pass
 
     def _request_ip(self):
         logging.info("请求新的ip")
@@ -26,6 +27,19 @@ class Data5UProxy(IpPool):
                 with self.cond:
                     self.cond.notify_all()
                 logging.info("请求成功")
+
+    def get_ip(self):
+        res = requests.get(self.api_url).content.decode()
+        res = json.loads(res)
+        all_data = res['data']
+        dd = all_data[0]
+        return f"{dd['ip']}:{dd['port']}"
+
+    def report_baned_ip(self, ip):
+        pass
+
+    def report_bad_net_ip(self, ip):
+        pass
 
 
 class GetIpThread(threading.Thread):
