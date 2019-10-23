@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="72101da6-3922-461b-909e-a0a5ffb98e74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/ip_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/ip_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_pool/xun_proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/xun_proxy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +59,11 @@
       <workItem from="1568716763820" duration="363000" />
       <workItem from="1568719296479" duration="802000" />
       <workItem from="1568720228387" duration="1514000" />
-      <workItem from="1568729390401" duration="3256000" />
+      <workItem from="1568729390401" duration="3802000" />
+      <workItem from="1568854626307" duration="214000" />
+      <workItem from="1568940804775" duration="584000" />
+      <workItem from="1571794898293" duration="55000" />
+      <workItem from="1571799568336" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="添加依赖">
       <created>1568716991217</created>
@@ -136,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568768902193</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新版本">
+      <created>1568769507481</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568769507481</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

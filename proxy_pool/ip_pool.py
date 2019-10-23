@@ -12,7 +12,7 @@ REQUEST_REACH_MAX = 2
 
 
 class IpPool(object):
-    def __init__(self, api_url, ):
+    def __init__(self, api_url, max_count=5):
         self.api_url = api_url
         self.ip_pool = set()
         self.ip_pool_back_up = set()
@@ -20,6 +20,7 @@ class IpPool(object):
         logging.basicConfig()
         self.cond = threading.Condition()
         self.lock = threading.Lock()
+        self.max_count = max_count
 
     def start(self):
         res = self._request_ip()
@@ -101,7 +102,7 @@ class IpPool(object):
         count_list = Counter(self.bad_net_ip_count)
         most_common_item = count_list.most_common(1)[0]
         logging.info(f"the baddest net ip is {most_common_item}")
-        if most_common_item[1] == 5:
+        if most_common_item[1] == self.max_count:
             self.bad_net_ip_count = [ip for ip in self.bad_net_ip_count if ip != most_common_item[0]]
             self.report_baned_ip(most_common_item[0])
 
