@@ -94,7 +94,7 @@
       <workItem from="1570022898954" duration="39000" />
       <workItem from="1570023008516" duration="165000" />
       <workItem from="1578385102942" duration="907000" />
-      <workItem from="1578387927195" duration="376000" />
+      <workItem from="1578387927195" duration="712000" />
     </task>
     <task id="LOCAL-00001" summary="添加依赖">
       <created>1568716991217</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578388081943</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="更新版本">
+      <created>1578388315432</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578388315432</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,11 +224,11 @@
     <MESSAGE value="添加依赖" />
     <MESSAGE value="更新依赖" />
     <MESSAGE value="更新setup字段错误" />
-    <MESSAGE value="更新版本" />
     <MESSAGE value="更新版本，添加了支持无忧代理的爬虫池" />
     <MESSAGE value="修改逻辑" />
     <MESSAGE value="当请求频率过快时，增加睡眠的时间" />
-    <option name="LAST_COMMIT_MESSAGE" value="当请求频率过快时，增加睡眠的时间" />
+    <MESSAGE value="更新版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新版本" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/proxy_pool$main.coverage" NAME="main Coverage Results" MODIFIED="1568987976941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
