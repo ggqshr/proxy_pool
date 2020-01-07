@@ -18,14 +18,7 @@ class XunProxy(IpPool):
         super().__init__(api_url, max_count)
 
     def start(self):
-        res = self._request_ip()
-        while res != REQUEST_SUCCESS:
-            if res == REQUEST_TOO_QUICK:
-                sleep(10)
-                res = self._request_ip()
-                continue
-            if res == REQUEST_REACH_MAX:
-                raise ReachMaxException()
+        self._update_ip()
 
     def _request_ip(self):
         res = requests.get(self.api_url).content.decode()  # 请求ip

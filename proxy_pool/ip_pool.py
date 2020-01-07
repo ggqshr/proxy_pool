@@ -23,14 +23,7 @@ class IpPool(object):
         self.max_count = max_count
 
     def start(self):
-        res = self._request_ip()
-        while res != REQUEST_SUCCESS:
-            if res == REQUEST_TOO_QUICK:
-                sleep(10)
-                res = self._request_ip()
-                continue
-            if res == REQUEST_REACH_MAX:
-                raise ReachMaxException()
+        self._update_ip()
 
     def _request_ip(self):
         res = requests.get(self.api_url).content.decode()  # 请求ip
@@ -75,17 +68,20 @@ class IpPool(object):
         self.ip_pool.discard(ip)
         logging.info(f"now the pool is {self.ip_pool}")
         if len(self.ip_pool) == 0 and self.lock.acquire(blocking=False) and ip in self.ip_pool_back_up:
-            res = self._request_ip()
-            while res != REQUEST_SUCCESS:
-                if res == REQUEST_TOO_QUICK:
-                    sleep(10)
-                    res = self._request_ip()
-                    continue
-                if res == REQUEST_REACH_MAX:
-                    raise ReachMaxException()
+            self._update_ip()
             self.ip_pool_back_up.clear()
             self.bad_net_ip_count.clear()
             self.lock.release()
+
+    def _update_ip(self):
+        res = self._request_ip()
+        while res != REQUEST_SUCCESS:
+            if res == REQUEST_TOO_QUICK:
+                sleep(10)
+                res = self._request_ip()
+                continue
+            if res == REQUEST_REACH_MAX:
+                raise ReachMaxException()
 
     def report_bad_net_ip(self, ip):
         """
