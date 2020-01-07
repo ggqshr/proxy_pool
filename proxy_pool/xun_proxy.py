@@ -14,8 +14,8 @@ REQUEST_REACH_MAX = 2
 
 
 class XunProxy(IpPool):
-    def __init__(self, api_url):
-        super().__init__(api_url)
+    def __init__(self, api_url, max_count=5):
+        super().__init__(api_url, max_count)
 
     def start(self):
         res = self._request_ip()
