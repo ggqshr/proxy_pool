@@ -34,6 +34,6 @@ class XunProxy(IpPool):
         elif res['ERRORCODE'] in ["10036", "10038", "10055"]:
             logging.info("提取频率过高")
             return REQUEST_TOO_QUICK
-        elif res["ERRORCODE"] is "10032":
+        elif res["ERRORCODE"] == "10032":
             logging.info("已达上限!!")
             return REQUEST_REACH_MAX
