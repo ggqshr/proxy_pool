@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72101da6-3922-461b-909e-a0a5ffb98e74" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proxy_pool/ip_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/ip_pool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proxy_pool/xun_proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_pool/xun_proxy.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+>>>>>>> 52aea1a4675ae2f87b97b26a0a605ec5a505b770
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QxVQtKQoH7Gxpdar4wipyF1hMv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -31,6 +37,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -43,6 +50,35 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="proxy_pool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -59,11 +95,20 @@
       <workItem from="1568716763820" duration="363000" />
       <workItem from="1568719296479" duration="802000" />
       <workItem from="1568720228387" duration="1514000" />
+<<<<<<< HEAD
       <workItem from="1568729390401" duration="3802000" />
       <workItem from="1568854626307" duration="214000" />
       <workItem from="1568940804775" duration="584000" />
       <workItem from="1571794898293" duration="55000" />
       <workItem from="1571799568336" duration="123000" />
+=======
+      <workItem from="1568729390401" duration="3256000" />
+      <workItem from="1568984339403" duration="5511000" />
+      <workItem from="1570022898954" duration="39000" />
+      <workItem from="1570023008516" duration="165000" />
+      <workItem from="1578385102942" duration="907000" />
+      <workItem from="1578387927195" duration="376000" />
+>>>>>>> 52aea1a4675ae2f87b97b26a0a605ec5a505b770
     </task>
     <task id="LOCAL-00001" summary="添加依赖">
       <created>1568716991217</created>
@@ -142,6 +187,7 @@
       <option name="project" value="LOCAL" />
       <updated>1568768902193</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00012" summary="更新版本">
       <created>1568769507481</created>
       <option name="number" value="00012" />
@@ -150,6 +196,30 @@
       <updated>1568769507481</updated>
     </task>
     <option name="localTasksCounter" value="13" />
+=======
+    <task id="LOCAL-00012" summary="更新版本，添加了支持无忧代理的爬虫池">
+      <created>1568988056615</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568988056615</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修改逻辑">
+      <created>1568989946084</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568989946084</updated>
+    </task>
+    <task id="LOCAL-00014" summary="当请求频率过快时，增加睡眠的时间">
+      <created>1578388081943</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578388081943</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+>>>>>>> 52aea1a4675ae2f87b97b26a0a605ec5a505b770
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +243,12 @@
     <MESSAGE value="更新依赖" />
     <MESSAGE value="更新setup字段错误" />
     <MESSAGE value="更新版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新版本" />
+    <MESSAGE value="更新版本，添加了支持无忧代理的爬虫池" />
+    <MESSAGE value="修改逻辑" />
+    <MESSAGE value="当请求频率过快时，增加睡眠的时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="当请求频率过快时，增加睡眠的时间" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/proxy_pool$main.coverage" NAME="main Coverage Results" MODIFIED="1568987976941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

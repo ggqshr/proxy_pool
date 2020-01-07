@@ -26,7 +26,7 @@ class IpPool(object):
         res = self._request_ip()
         while res != REQUEST_SUCCESS:
             if res == REQUEST_TOO_QUICK:
-                sleep(5)
+                sleep(10)
                 res = self._request_ip()
                 continue
             if res == REQUEST_REACH_MAX:
@@ -78,6 +78,7 @@ class IpPool(object):
             res = self._request_ip()
             while res != REQUEST_SUCCESS:
                 if res == REQUEST_TOO_QUICK:
+                    sleep(10)
                     res = self._request_ip()
                     continue
                 if res == REQUEST_REACH_MAX:
