@@ -35,7 +35,7 @@ class Data5UProxy(IpPool):
     def report_baned_ip(self, ip):
         logging.debug(f"remove {ip} from pool!")
         self.ip_pool.discard(ip)
-        logging.debug(f"now the pool is {self.ip_pool}")
+        logging.info(f"now the pool is {self.ip_pool}")
 
     def report_bad_net_ip(self, ip):
         pass
@@ -55,7 +55,7 @@ class GetIpThread(threading.Thread):
     def run(self) -> None:
         while self.keep_run:
             if len(list(self.ip_pool)) < 5:
-                logging.debug("刷新新的ip")
+                logging.info("刷新新的ip")
                 res = requests.get(self.url).content.decode()
                 res = json.loads(res)
                 if res['success']:
