@@ -1,5 +1,6 @@
 import json
 import logging
+from random import choice
 from time import sleep
 
 import requests
@@ -13,7 +14,7 @@ class Data5UProxy(IpPool):
         super().__init__(api_url)
 
     def start(self):
-        # GetIpThread(self.api_url, self.ip_pool, self.cond).start()
+        GetIpThread(self.api_url, self.ip_pool, self.cond).start()
         pass
 
     def _request_ip(self):
@@ -29,14 +30,14 @@ class Data5UProxy(IpPool):
                 logging.info("请求成功")
 
     def get_ip(self):
-        res = requests.get(self.api_url).content.decode()
-        res = json.loads(res)
-        all_data = res['data']
-        dd = all_data[0]
-        return f"{dd['ip']}:{dd['port']}"
+        with self.cond:
+            self.cond.wait_for(self._has_ip)
+            return choice(list(self.ip_pool))
 
     def report_baned_ip(self, ip):
-        pass
+        logging.info(f"remove {ip} from pool!")
+        self.ip_pool.discard(ip)
+        logging.info(f"now the pool is {self.ip_pool}")
 
     def report_bad_net_ip(self, ip):
         pass
