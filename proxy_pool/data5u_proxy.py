@@ -54,16 +54,17 @@ class GetIpThread(threading.Thread):
 
     def run(self) -> None:
         while self.keep_run:
-            logging.debug("刷新新的ip")
-            res = requests.get(self.url).content.decode()
-            res = json.loads(res)
-            if res['success']:
-                all_data = res['data']
-                for dd in all_data:
-                    self.ip_pool.add(f"{dd['ip']}:{dd['port']}")
-                    logging.debug("请求成功")
-                    with self.cond:
-                        self.cond.notify_all()
+            if len(list(self.ip_pool)) < 5:
+                logging.debug("刷新新的ip")
+                res = requests.get(self.url).content.decode()
+                res = json.loads(res)
+                if res['success']:
+                    all_data = res['data']
+                    for dd in all_data:
+                        self.ip_pool.add(f"{dd['ip']}:{dd['port']}")
+                        logging.debug("请求成功")
+                        with self.cond:
+                            self.cond.notify_all()
             sleep(5)
 
     def terminate(self):
