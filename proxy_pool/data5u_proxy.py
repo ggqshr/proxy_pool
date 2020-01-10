@@ -33,9 +33,9 @@ class Data5UProxy(IpPool):
             return choice(list(self.ip_pool))
 
     def report_baned_ip(self, ip):
-        logging.info(f"remove {ip} from pool!")
+        logging.debug(f"remove {ip} from pool!")
         self.ip_pool.discard(ip)
-        logging.info(f"now the pool is {self.ip_pool}")
+        logging.debug(f"now the pool is {self.ip_pool}")
 
     def report_bad_net_ip(self, ip):
         pass
