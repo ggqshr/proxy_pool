@@ -21,7 +21,7 @@ class XunProxy(IpPool):
         self._update_ip()
 
     def _request_ip(self):
-        res = requests.get(self.api_url).content.decode()  # 请求ip
+        res = self.sess.get(self.api_url).content.decode()  # 请求ip
         res = json.loads(res)  # 解析成字典
         if res['ERRORCODE'] == "0":
             with self.cond:

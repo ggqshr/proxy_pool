@@ -21,12 +21,16 @@ class IpPool(object):
         self.cond = threading.Condition()
         self.lock = threading.Lock()
         self.max_count = max_count
+        self.sess = requests.Session()  # 构建 connections pool
+        adapter = requests.adapters.HTTPAdapter(pool_connections=20, pool_maxsize=20)
+        self.sess.mount("https://", adapter)
+        self.sess.mount("http://", adapter)
 
     def start(self):
         self._update_ip()
 
     def _request_ip(self):
-        res = requests.get(self.api_url).content.decode()  # 请求ip
+        res = self.sess.get(self.api_url).content.decode()  # 请求ip
         res = json.loads(res)  # 解析成字典
         if res['ERRORCODE'] == "0":
             with self.cond:
