@@ -43,6 +43,22 @@ class Data5UProxy(IpPool):
     def close(self):
         self.refresh_thread.terminate()
 
+    def is_active(self):
+        """
+        判断当前拉取ip的线程是否存活
+        :return:
+        """
+        return self.refresh_thread.keep_run
+
+    def restart(self):
+        """
+        重启拉去ip的线程
+        :return:
+        """
+        del self.refresh_thread
+        self.refresh_thread = GetIpThread(self.api_url, self.ip_pool, self.cond)
+        self.refresh_thread.start()
+
 
 class GetIpThread(threading.Thread):
     def __init__(self, api_url, ip_pool: set, cond: threading.Condition):
