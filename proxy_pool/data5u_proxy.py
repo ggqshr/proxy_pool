@@ -76,8 +76,9 @@ class GetIpThread(threading.Thread):
         while self.keep_run:
             if len(list(self.ip_pool)) < 5:
                 logging.info("刷新新的ip")
-                res = self.sess.get(self.url).content.decode()
-                res = json.loads(res)
+                response: requests.Response = self.sess.get(self.url)
+                content = response.content.decode()
+                res = json.loads(content)
                 if res['success']:
                     all_data = res['data']
                     for dd in all_data:
@@ -85,6 +86,7 @@ class GetIpThread(threading.Thread):
                         logging.debug("请求成功")
                         with self.cond:
                             self.cond.notify_all()
+                response.close()
             sleep(5)
 
     def terminate(self):
