@@ -10,7 +10,7 @@ import threading
 class Data5UProxy(IpPool):
     def __init__(self, api_url):
         super().__init__(api_url)
-        self.refresh_thread = GetIpThread(self.api_url, self.ip_pool, self.cond, self.sess)
+        self.refresh_thread = GetIpThread(self.api_url, self.ip_pool, self.cond)
 
     def start(self):
         self.refresh_thread.start()
@@ -56,18 +56,21 @@ class Data5UProxy(IpPool):
         :return:
         """
         del self.refresh_thread
-        self.refresh_thread = GetIpThread(self.api_url, self.ip_pool, self.cond, self.sess)
+        self.refresh_thread = GetIpThread(self.api_url, self.ip_pool, self.cond)
         self.refresh_thread.start()
 
 
 class GetIpThread(threading.Thread):
-    def __init__(self, api_url, ip_pool: set, cond: threading.Condition, sess):
+    def __init__(self, api_url, ip_pool: set, cond: threading.Condition):
         super().__init__(daemon=True)
         self.url = api_url
         self.ip_pool = ip_pool
         self.cond = cond
         self.keep_run = True
-        self.sess = sess
+        self.sess = requests.Session()  # 构建 connections pool
+        adapter = requests.adapters.HTTPAdapter(pool_connections=20, pool_maxsize=20)
+        self.sess.mount("https://", adapter)
+        self.sess.mount("http://", adapter)
 
     def run(self) -> None:
         while self.keep_run:
